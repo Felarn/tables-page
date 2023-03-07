@@ -1,5 +1,5 @@
 function tableCreate() {
-let   raw = document.getElementById("input-area-id").value.trim()
+let   raw = document.getElementById("input-area-id").value.trim().replace(',','.')
 
     raw = raw.split('\n')
 .map(cell => cell.split('\t').map(Number))
@@ -49,7 +49,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
       const tr = tbl.insertRow();
       for (let j = 0; j < voltage.length; j++) {
         const td = tr.insertCell();
-        td.appendChild(document.createTextNode(out[i][j]));
+        td.appendChild(document.createTextNode(out[i][j]).split('.').join(','));
         td.style.border = '1px solid black';
       }
     }
