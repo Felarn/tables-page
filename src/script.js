@@ -68,6 +68,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
   par2.appendChild(document.createTextNode('Nraw{SetN}=[' + total.join(' ') + ']'));
   par3.appendChild(document.createTextNode('Kraw{SetN}=[' + fails.join(' ') + ']'));
 
+  
 }
 
 
