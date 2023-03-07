@@ -49,7 +49,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
       const tr = tbl.insertRow();
       for (let j = 0; j < voltage.length; j++) {
         const td = tr.insertCell();
-        td.appendChild(document.createTextNode(out[i][j].split('.').join(',')));
+        td.appendChild(document.createTextNode(String(out[i][j]).replace('.',',')));
         td.style.border = '1px solid black';
       }
     }
