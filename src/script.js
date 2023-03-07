@@ -35,7 +35,10 @@ console.log('Nraw{SetN}=[' + total.join(' ') + ']');
 console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
 
     document.getElementById("first-table").remove();
-    
+    document.getElementById("line1").remove();
+    document.getElementById("line2").remove();
+    document.getElementById("line3").remove();
+
     const body = document.body,
           tbl = document.createElement('table');
     tbl.setAttribute("id", "first-table");
@@ -52,7 +55,21 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
     }
     body.appendChild(tbl);
   }
+
+  const par1 = body.appendChild(document.createElement('p'));
+  const par2 = body.appendChild(document.createElement('p'));
+  const par3 = body.appendChild(document.createElement('p'));
   
+  par1.setAttribute("id", "line1");
+  par2.setAttribute("id", "line2");
+  par3.setAttribute("id", "line3");
+
+  par1.appendChild(document.createTextNode('Iraw{SetN}=[' + voltage.join(' ') + ']'));
+  par2.appendChild(document.createTextNode('Nraw{SetN}=[' + total.join(' ') + ']'));
+  par3.appendChild(document.createTextNode('Kraw{SetN}=[' + fails.join(' ') + ']'));
+  
+
+
   document.getElementById("clickMe").onclick = tableCreate;
   // tableCreate();
 // test push
