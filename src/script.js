@@ -9,9 +9,9 @@ let sum = [raw[0]];
 
 for( const row of raw.slice(1)){
 //console.log(row) 
- if (row[0] === sum.at(-1)[0]){
-   sum.at(-1)[1] += row[1];
-   sum.at(-1)[2] += row[2];
+ if (row[0] === sum[sum.length-1][0]){
+   sum[sum.length-1][1] += row[1];
+   sum[sum.length-1][2] += row[2];
  } else sum.push(row)
 } 
 console.log('==================')
@@ -29,8 +29,10 @@ const out=[voltage,total,fails];
 console.log('[' + voltage.join(' ') + ']');
 console.log('[' + total.join(' ') + ']');
 console.log('[' + fails.join(' ') + ']');
-
-
+console.log('==================')
+console.log('Iraw{SetN}=[' + voltage.join(' ') + ']');
+console.log('Nraw{SetN}=[' + total.join(' ') + ']');
+console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
 
     document.getElementById("first-table").remove();
     
