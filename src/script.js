@@ -54,7 +54,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
       }
     }
     body.appendChild(tbl);
-  }
+ 
 
   const par1 = body.appendChild(document.createElement('p'));
   const par2 = body.appendChild(document.createElement('p'));
@@ -67,7 +67,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
   par1.appendChild(document.createTextNode('Iraw{SetN}=[' + voltage.join(' ') + ']'));
   par2.appendChild(document.createTextNode('Nraw{SetN}=[' + total.join(' ') + ']'));
   par3.appendChild(document.createTextNode('Kraw{SetN}=[' + fails.join(' ') + ']'));
-  
+}
 
 
   document.getElementById("clickMe").onclick = tableCreate;
