@@ -49,7 +49,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
       const tr = tbl.insertRow();
       for (let j = 0; j < voltage.length; j++) {
         const td = tr.insertCell();
-        td.appendChild(document.createTextNode(out[i][j]).split('.').join(','));
+        td.appendChild(document.createTextNode(out[i][j].split('.').join(',')));
         td.style.border = '1px solid black';
       }
     }
@@ -66,11 +66,8 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
 
   par1.appendChild(document.createTextNode('Iraw{SetN}=[' + voltage.join(' ') + ']'));
   par2.appendChild(document.createTextNode('Nraw{SetN}=[' + total.join(' ') + ']'));
-  par3.appendChild(document.createTextNode('Iraw{SetN}=[' + voltage.join(' ') + ']'+'<br>Nraw{SetN}=[' + total.join(' ') + ']'+'<br>Kraw{SetN}=[' + fails.join(' ') + ']'));
-
-  
+  par3.appendChild(document.createTextNode('Kraw{SetN}=[' + fails.join(' ') + ']'));
 }
-
 
   document.getElementById("clickMe").onclick = tableCreate;
   // tableCreate();
