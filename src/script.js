@@ -55,7 +55,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
     }
     body.appendChild(tbl);
  
-
+  // changes are stuck
   const par1 = body.appendChild(document.createElement('p'));
   const par2 = body.appendChild(document.createElement('p'));
   const par3 = body.appendChild(document.createElement('p'));
