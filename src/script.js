@@ -45,11 +45,11 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
     tbl.style.width = '100px';
     tbl.style.border = '1px solid black';
   
-    for (let i = 0; i < voltage.length; i++) {
+    for (let i = 0; i < 3; i++) {
       const tr = tbl.insertRow();
-      for (let j = 0; j < 3; j++) {
+      for (let j = 0; j < voltage.length; j++) {
         const td = tr.insertCell();
-        td.appendChild(document.createTextNode(out[j][i]));
+        td.appendChild(document.createTextNode(out[i][j]));
         td.style.border = '1px solid black';
       }
     }
