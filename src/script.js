@@ -67,6 +67,7 @@ console.log('Kraw{SetN}=[' + fails.join(' ') + ']');
   par1.appendChild(document.createTextNode('Iraw{SetN}=[' + voltage.join(' ') + ']'));
   par2.appendChild(document.createTextNode('Nraw{SetN}=[' + total.join(' ') + ']'));
   par3.appendChild(document.createTextNode('Kraw{SetN}=[' + fails.join(' ') + ']'));
+
 }
 
 
