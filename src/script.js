@@ -1,8 +1,10 @@
 function tableCreate() {
-let   raw = document.getElementById("input-area-id").value.trim().replace(',','.')
+let   raw = document.getElementById("input-area-id").value.trim()
 
-    raw = raw.split('\n')
-.map(cell => cell.split('\t').map(Number))
+raw = raw.split('\n')
+.map(cell => cell
+ .split('\t')
+ .map((elem)=>Number(elem.replace(',','.'))))
 .sort((str1,str2) => str1[0]-str2[0]);
 
 let sum = [raw[0]];
